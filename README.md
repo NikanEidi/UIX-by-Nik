@@ -1,5 +1,3 @@
-
-
 # 🎨 UIX-by-Nik
 
 ### Introduction to User Interface & User Experience Design
@@ -9,8 +7,7 @@ Clean, structured notes covering the fundamentals of UI/UX design — from under
 ![Status](https://img.shields.io/badge/status-complete-success)
 ![Lectures](https://img.shields.io/badge/lectures-7-blue)
 ![Topic](https://img.shields.io/badge/topic-UI%2FUX-gold)
-
-
+![Practice](https://img.shields.io/badge/includes-mock%20exam-orange)
 
 ---
 
@@ -46,6 +43,14 @@ flowchart LR
 
 ---
 
+## 🧪 Practice
+
+| File | Description |
+|------|-------------|
+| [Mock Exam + Answers](Mocks/mock1.md) | Full practice question with persona, scenario, and model answers for all 4 parts |
+
+---
+
 ## 🎯 Core Ideas at a Glance
 
 - **Design for the user, not yourself** — every decision needs a reason.
@@ -61,12 +66,8 @@ flowchart LR
 1. Read top to bottom — each lecture builds on the last.
 2. Use the Mermaid diagrams to visualize the flow.
 3. Practice applying every concept to a real persona + scenario.
+4. Test yourself with the mock exam before the real thing.
 
 ---
 
-
-
----
 > ✍️ *Writed by Nikan Eidi*
-
-
