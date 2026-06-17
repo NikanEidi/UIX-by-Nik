@@ -1,88 +1,114 @@
-# 🧠 UIX544 — Exam Cheat Sheet
+# UIX544 — Exam Cheat Sheet
 
-
+> One page. Everything that matters. Read this before you walk in.
 
 ---
 
-## 🔑 The One Rule
+## The One Rule
 
 > **Every design decision must connect back to the persona.**
 > No persona connection = no marks.
 
 ---
 
-## 👤 How to Read a Persona Fast
+## How to Read a Persona in 30 Seconds
 
-Look for three things immediately:
-
-| Look for | It tells you |
-|----------|-------------|
-| What frustrates them | → pain points for Part A & B |
-| How fast / skilled they are | → skill level, flow complexity |
-| What they *really* want | → hidden driver for Part A |
-
-> The quote at the end of the persona is always the hidden driver. Use it.
-
----
-
-## 🗺️ Part A — User Goal & Task Flow
-
-**5 sentences. That's it.**
-
-1. **Goal** — task + hidden driver in one sentence.
-2. **Pain points** — 2 or 3, pulled from the persona. Don't repeat the goal.
-3. **Task flow** — `Start → step → step → step → End` (5–8 steps, no yes/no logic)
-4. **Feedback** — when + why. Always after the final confirm action.
-5. **Friction** — one problem + one design fix.
-
-**Task Flow Rules:**
-- ✅ 5 to 8 steps
-- ✅ Decisions (pick A or B) are fine
-- ❌ No logic branches (yes/no → different page)
-- ❌ No "read instructions" or "login" steps
+```mermaid
+flowchart LR
+    A[What frustrates them] --> B[Pain Points - Part A and B]
+    C[How fast they move] --> D[Skill Level + Flow Length]
+    E[The quote at the end] --> F[Hidden Driver - Part A Goal]
+    style B fill:#caa24a,color:#1a1a1a
+    style D fill:#caa24a,color:#1a1a1a
+    style F fill:#caa24a,color:#1a1a1a
+```
 
 ---
 
-## 🎯 Part B — Design Priorities
+## The 4-Part Answer Map
 
-**4 sentences.**
+```mermaid
+flowchart TD
+    A[Part A\nGoal + Flow] --> C[Part C\nPick 3 screens FROM the flow]
+    A --> B[Part B\nPrioritize what is in the flow]
+    B --> D[Part D\nJustify with laws]
+    C --> D
+    style A fill:#caa24a,color:#1a1a1a
+    style D fill:#3a3a3a,color:#ffffff
+```
 
-1. **Most important info** — what the user needs to *see* before deciding.
-2. **Easiest actions** — what buttons/elements must be large and reachable.
-3. **Why it fits** — connect directly to the persona's pain points.
-4. **One design decision** — a specific UI choice that cuts effort or confusion.
-
----
-
-## 🖥️ Part C — Screen Types
-
-**Always: Overview → Focus → Do**
-
-| Type | Purpose | Key Elements |
-|------|---------|--------------|
-| **Overview** | Browse all options | List, grid, cards, filters |
-| **Focus** | Zoom into one item | Selectors, toggles, detail info |
-| **Do** | Complete the action | Confirm button, summary, feedback |
-
-> Pick your 3 screens directly from your task flow in Part A.
+> **Part A feeds everything. Get the task flow right first.**
 
 ---
 
-## 🧭 Part D — Navigation & Interaction
+## Part A — 5 Sentences
 
-**4 sentences.**
+| # | Sentence | Rule |
+|---|----------|------|
+| 1 | Goal | task + hidden driver |
+| 2 | Pain points | 2–3 from persona, never repeat goal |
+| 3 | Task flow | Start → ... → End, 5–8 steps, no yes/no |
+| 4 | Feedback | when + why, always after confirm |
+| 5 | Friction | one problem + one fix |
 
-1. **Navigation decision** — Tab Bar / Back Button / Progress Indicator + why it helps.
-2. **Principle 1** — name the law + one specific UI decision.
-3. **Principle 2** — name the law + one specific UI decision.
-4. **Together** — connect both to the persona's pain points.
+```mermaid
+flowchart LR
+    S([Start]) --> A[Step] --> B[Step] --> C[Step] --> D[Step] --> E([End])
+    style S fill:#caa24a,color:#1a1a1a
+    style E fill:#caa24a,color:#1a1a1a
+```
+
+**Task Flow:** + steps only — no login, no instructions, no yes/no branches
 
 ---
 
-## ⚖️ UX Laws — Quick Reference
+## Part B — 4 Sentences
 
-| Law | One Line | Use When |
-|-----|----------|----------|
+| # | Sentence |
+|---|----------|
+| 1 | Most important info the user needs to see |
+| 2 | Actions that must be large and easy to reach |
+| 3 | Why this fits the persona specifically |
+| 4 | One UI decision that cuts effort or confusion |
+
+---
+
+## Part C — Screen Types
+
+```mermaid
+flowchart LR
+    O[Overview\nBrowse all options] --> F[Focus\nZoom into one]
+    F --> D[Do\nComplete the action]
+    style O fill:#f0e4c0,color:#1a1a1a
+    style F fill:#e0c97f,color:#1a1a1a
+    style D fill:#caa24a,color:#1a1a1a
+```
+
+| Type | Key UI Elements |
+|------|----------------|
+| Overview | Cards, list, grid, filters |
+| Focus | Selectors, toggles, checkboxes |
+| Do | Confirm button, order summary, feedback |
+
+> Pick all 3 screens directly from your Part A task flow.
+
+---
+
+## Part D — 4 Sentences
+
+| # | Sentence |
+|---|----------|
+| 1 | One nav decision + why it helps |
+| 2 | Principle 1 + specific UI decision |
+| 3 | Principle 2 + specific UI decision |
+| 4 | Together they support the persona because... |
+
+---
+
+## UX Laws
+
+| Law | Rule | Use When |
+|-----|------|----------|
 | **Hick's Law** | Fewer choices = faster decisions | Persona feels overwhelmed |
 | **Fitts's Law** | Big + close = easy to tap | Persona is in a hurry |
 | **Jakob's Law** | Familiar = faster to learn | Persona is new to the app |
@@ -90,35 +116,23 @@ Look for three things immediately:
 
 ---
 
-## 🧩 Navigation — Quick Reference
+## Navigation Patterns
 
-| Pattern | Use On |
-|---------|--------|
-| Tab Bar (bottom) | Mobile |
-| Top / Left Nav | Desktop |
+| Pattern | Platform |
+|---------|----------|
+| Tab Bar — bottom | Mobile |
+| Top or Left Nav | Desktop |
 | Progress Indicator | Multi-step flows |
 | Back Button | Every screen |
 
 ---
 
-## 🚨 Common Mistakes to Avoid
+## Pre-Submit Checklist
 
-- ❌ Repeating the goal as the pain point
-- ❌ Adding login / instructions to the task flow
-- ❌ Naming a navigation pattern as an interaction principle
-- ❌ Forgetting to connect decisions back to the persona
-- ❌ Using more than 8 steps in the task flow
-
----
-
-## ✅ 60-Second Answer Check
-
-Before you submit, confirm each part has:
-
-- **A** → goal + pain points + 5–8 step flow + feedback + friction fix
-- **B** → key info + easy actions + persona fit + one design decision
-- **C** → 3 screens, each with type + reason + UI element + user progress
-- **D** → 1 nav decision + 2 named laws + specific UI decisions + persona tie-in
+- [ ] **A** — goal + pain points + 5–8 step flow + feedback + friction fix
+- [ ] **B** — key info + easy actions + persona fit + one design decision
+- [ ] **C** — 3 screens with type + reason + UI element + user progress
+- [ ] **D** — 1 nav decision + 2 named laws + UI decisions + persona tie-in
 
 ---
 
