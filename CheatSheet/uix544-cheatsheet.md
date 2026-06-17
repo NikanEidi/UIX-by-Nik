@@ -1,55 +1,76 @@
 # UIX544 — Exam Cheat Sheet
 
-> One page. Everything that matters. Read this before you walk in.
+> Read this 3 times. You'll ace it.
 
 ---
 
-## The One Rule
+## UI vs UX
 
-> **Every design decision must connect back to the persona.**
-> No persona connection = no marks.
+| | UI | UX |
+|---|---|---|
+| What | How it **looks** | How it **feels** |
+| Focus | Buttons, colors, layout | Flow, emotion, ease |
+| Question | Is it clear? | Was it effortless? |
+
+> UI is the plate. UX is the meal.
 
 ---
 
-## How to Read a Persona in 30 Seconds
+## UX Pyramid
+
+```mermaid
+flowchart TB
+    A[Delightful] --> B[Usable] --> C[Useful]
+    style A fill:#caa24a,color:#1a1a1a
+    style B fill:#e0c97f,color:#1a1a1a
+    style C fill:#f0e4c0,color:#1a1a1a
+```
+
+Build in order: **Useful first → then Usable → then Delightful**
+
+---
+
+## Understanding Users
 
 ```mermaid
 flowchart LR
-    A[What frustrates them] --> B[Pain Points - Part A and B]
-    C[How fast they move] --> D[Skill Level + Flow Length]
-    E[The quote at the end] --> F[Hidden Driver - Part A Goal]
-    style B fill:#caa24a,color:#1a1a1a
-    style D fill:#caa24a,color:#1a1a1a
-    style F fill:#caa24a,color:#1a1a1a
-```
-
----
-
-## The 4-Part Answer Map
-
-```mermaid
-flowchart TD
-    A[Part A\nGoal + Flow] --> C[Part C\nPick 3 screens FROM the flow]
-    A --> B[Part B\nPrioritize what is in the flow]
-    B --> D[Part D\nJustify with laws]
-    C --> D
+    A[Context] --> B[Goals] --> C[Research] --> D[Patterns]
     style A fill:#caa24a,color:#1a1a1a
-    style D fill:#3a3a3a,color:#ffffff
+    style D fill:#caa24a,color:#1a1a1a
 ```
 
-> **Part A feeds everything. Get the task flow right first.**
+**Ask WHY — the Goal Iceberg:**
+
+| Visible | Hidden |
+|---------|--------|
+| "I want to order food" | "I don't want to be late" |
+| Transactional goal | Real driver |
+
+> The persona quote = always the hidden driver.
 
 ---
 
-## Part A — 5 Sentences
+## Persona — Brain / Heart / Hands
 
-| # | Sentence | Rule |
-|---|----------|------|
-| 1 | Goal | task + hidden driver |
-| 2 | Pain points | 2–3 from persona, never repeat goal |
-| 3 | Task flow | Start → ... → End, 5–8 steps, no yes/no |
-| 4 | Feedback | when + why, always after confirm |
-| 5 | Friction | one problem + one fix |
+| | What it captures |
+|---|---|
+| Brain | Goals + mental models |
+| Heart | Frustrations + motivations |
+| Hands | Actions + tasks |
+
+**Skill Levels:**
+
+| Level | Needs |
+|-------|-------|
+| Occasional | Lots of guidance |
+| Intermediate | Balance of help + speed |
+| Expert | Fast, no hand-holding |
+
+> Judge skill level for **this app**, not the user in general.
+
+---
+
+## Task Flow
 
 ```mermaid
 flowchart LR
@@ -58,81 +79,85 @@ flowchart LR
     style E fill:#caa24a,color:#1a1a1a
 ```
 
-**Task Flow:** + steps only — no login, no instructions, no yes/no branches
+| Rule | |
+|------|-|
+| 5–8 steps only | No more, no less |
+| No yes/no branches | That's a usage flow |
+| No login or instructions | Not part of the task |
+| Must match the persona | Design for them, not yourself |
+
+**Task Flow vs Usage Flow:**
+
+| Task Flow | Usage Flow |
+|-----------|-----------|
+| Main path only | Every possible path |
+| 5–8 steps | Long and branching |
+| No logic | Full of yes/no |
 
 ---
 
-## Part B — 4 Sentences
-
-| # | Sentence |
-|---|----------|
-| 1 | Most important info the user needs to see |
-| 2 | Actions that must be large and easy to reach |
-| 3 | Why this fits the persona specifically |
-| 4 | One UI decision that cuts effort or confusion |
-
----
-
-## Part C — Screen Types
+## Screen Types
 
 ```mermaid
 flowchart LR
-    O[Overview\nBrowse all options] --> F[Focus\nZoom into one]
-    F --> D[Do\nComplete the action]
+    O[Overview\nBrowse all options] --> F[Focus\nZoom into one] --> D[Do\nComplete the action]
     style O fill:#f0e4c0,color:#1a1a1a
     style F fill:#e0c97f,color:#1a1a1a
     style D fill:#caa24a,color:#1a1a1a
 ```
 
-| Type | Key UI Elements |
-|------|----------------|
-| Overview | Cards, list, grid, filters |
-| Focus | Selectors, toggles, checkboxes |
-| Do | Confirm button, order summary, feedback |
-
-> Pick all 3 screens directly from your Part A task flow.
+| Type | Purpose | Key UI |
+|------|---------|--------|
+| Overview | See all options | Cards, list, grid |
+| Focus | Configure one item | Selectors, toggles |
+| Do | Final action | Confirm button, summary |
 
 ---
 
-## Part D — 4 Sentences
+## Navigation
 
-| # | Sentence |
-|---|----------|
-| 1 | One nav decision + why it helps |
-| 2 | Principle 1 + specific UI decision |
-| 3 | Principle 2 + specific UI decision |
-| 4 | Together they support the persona because... |
+| Pattern | Use On | Answers |
+|---------|--------|---------|
+| Tab Bar (bottom) | Mobile | Where can I go? |
+| Top / Left Nav | Desktop | Where can I go? |
+| Progress Indicator | Multi-step | Where am I? |
+| Back Button | Every screen | How do I get back? |
+
+> Mobile = Tab Bar at the bottom. Always.
 
 ---
 
 ## UX Laws
 
-| Law | Rule | Use When |
-|-----|------|----------|
-| **Hick's Law** | Fewer choices = faster decisions | Persona feels overwhelmed |
+| Law | One Line | Use When |
+|-----|----------|----------|
+| **Hick's Law** | Fewer choices = faster decisions | Persona is overwhelmed |
 | **Fitts's Law** | Big + close = easy to tap | Persona is in a hurry |
-| **Jakob's Law** | Familiar = faster to learn | Persona is new to the app |
+| **Jakob's Law** | Familiar patterns = faster learning | Persona is new to app |
 | **Feedback** | Every action needs a response | Always — especially on confirm |
 
+```mermaid
+flowchart LR
+    A[Overwhelmed persona] --> B[Hick's Law]
+    C[Rushed persona] --> D[Fitts's Law]
+    E[New to app] --> F[Jakob's Law]
+    G[Any confirmation] --> H[Feedback]
+    style B fill:#caa24a,color:#1a1a1a
+    style D fill:#caa24a,color:#1a1a1a
+    style F fill:#caa24a,color:#1a1a1a
+    style H fill:#caa24a,color:#1a1a1a
+```
+
 ---
 
-## Navigation Patterns
+## The Golden Rules
 
-| Pattern | Platform |
-|---------|----------|
-| Tab Bar — bottom | Mobile |
-| Top or Left Nav | Desktop |
-| Progress Indicator | Multi-step flows |
-| Back Button | Every screen |
-
----
-
-## Pre-Submit Checklist
-
-- [ ] **A** — goal + pain points + 5–8 step flow + feedback + friction fix
-- [ ] **B** — key info + easy actions + persona fit + one design decision
-- [ ] **C** — 3 screens with type + reason + UI element + user progress
-- [ ] **D** — 1 nav decision + 2 named laws + UI decisions + persona tie-in
+- Design for the **user**, not yourself
+- **Ask WHY** before designing anything
+- **Less is more** — reduce steps, reduce choices
+- Always **give feedback** — never leave users guessing
+- **Consistency** — same patterns, same behavior everywhere
+- Every decision needs a **reason tied to the persona**
 
 ---
 
