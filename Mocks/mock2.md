@@ -39,7 +39,17 @@ System feedback is needed when... because...
 One possible friction point is... The design could reduce this by...
 ```
 
-**Your Answer:**
+### ✅ Answer
+
+The user's main goal is to quickly select and confirm a prescription refill for herself and her mother, without confusing steps or uncertain actions, and to receive a clear confirmation that includes the pickup time.
+
+The main needs or pain points are: feeling anxious when unsure whether an action was completed correctly, frustration with repetitive or unnecessary steps, and needing a clear summary after confirming to feel confident the request was sent.
+
+A suitable task flow is: `Start → View active prescriptions → Select prescription to refill → Choose pickup location and time → Review refill request → Confirm refill → End`
+
+System feedback is needed when the user confirms the refill, because Diana needs to know the request has been successfully sent and see the exact pickup time before leaving the app.
+
+One possible friction point is having too many separate steps for selecting location and time. The design could reduce this by merging pickup location and time into a single screen, and adding clear labels and a response after every action so Diana never feels uncertain about what happened.
 
 ---
 
@@ -61,7 +71,15 @@ These priorities fit the persona because...
 One design decision that reduces effort or confusion is...
 ```
 
-**Your Answer:**
+### ✅ Answer
+
+The most important information for the user is the list of active prescriptions, available pickup locations and times, and a confirmation summary showing that the refill request was sent along with the pickup details.
+
+The easiest actions to access should be the prescription selection, the pickup location and time selectors, and the confirm button. All key actions should be large, clearly labeled, and provide immediate visual feedback after each tap.
+
+These priorities fit the persona because Diana manages refills for two people, prefers a straightforward experience with no surprises, and needs to feel confident that every action was registered correctly before moving forward.
+
+One design decision that reduces effort or confusion is adding a Back button on every screen, so Diana can correct a selection without starting the entire flow over — reducing anxiety and the risk of repeating steps.
 
 ---
 
@@ -83,7 +101,13 @@ For each screen:
 | | | | | |
 | | | | | |
 
-**Your Answer:**
+### ✅ Answer
+
+| Screen | Screen Type / Model | Reason | Key UI Element | User Progress |
+|--------|---------------------|--------|----------------|---------------|
+| View Active Prescriptions | Overview | Diana needs to browse all active prescriptions before selecting one to refill | Prescription list, patient name label, Select button | User is reviewing available prescriptions and choosing one |
+| Choose Pickup Location and Time | Focus | User is focused on one specific decision — where and when to pick up | Radio buttons for location, time slot selector, Next button | User is narrowing down the refill details based on availability |
+| Confirm Refill | Do | User completes the final action of submitting the refill request | Confirm button, refill summary, pickup location and time | User has confirmed the refill and can see full details in the confirmation summary |
 
 ---
 
@@ -104,7 +128,15 @@ The second interaction design principle is... A specific UI decision is...
 Together, these decisions support the persona because...
 ```
 
-**Your Answer:**
+### ✅ Answer
+
+One useful navigation decision is adding a progress indicator at the top of each screen, so Diana always knows which step she is on and how many remain — reducing anxiety and helping her feel in control of the process.
+
+The first interaction design principle is the Feedback Principle. A specific UI decision is displaying a visible response after every action — such as a checkmark when a prescription is selected and a success message after confirming — so Diana never feels uncertain whether her action was registered.
+
+The second interaction design principle is Fitts's Law. A specific UI decision is placing the Confirm button large and at the bottom of the screen within easy thumb reach, and making all selection buttons a comfortable tap size, so Diana can move through the flow quickly without struggling with small targets.
+
+Together, these decisions support the persona because Diana is an anxious user who needs constant reassurance that her actions are working, dislikes repeating steps, and wants to finish the refill quickly and confidently without any surprises.
 
 ---
 
