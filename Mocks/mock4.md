@@ -21,90 +21,57 @@ She says: *"I want to plan my whole week in one go — I don't want to start ove
 
 ## Part A — User Goal & Task Flow *(5 marks)*
 
-Based on the scenario and persona above, explain what the user is trying to accomplish and how they would move through the app feature to complete the task.
+### ✅ Answer
 
-Your answer should:
-- Define the user's main goal
-- Describe the user's main needs or pain points
-- Present a clear task flow from start to completion
-- Identify where system feedback is needed and why
-- Explain how one possible friction point could be reduced through design
+The user's main goal is to quickly browse and book multiple fitness classes for the upcoming week in one sitting, without losing her selections or repeating steps every time she picks a new class.
 
-**Suggested Answer Structure:**
-```
-The user's main goal is to...
-The main needs or pain points are...
-A suitable task flow is: Start → ... → ... → ... → End
-System feedback is needed when... because...
-One possible friction point is... The design could reduce this by...
-```
+The main needs or pain points are: getting frustrated when selections are lost after navigating away from a screen, wasting time on repetitive steps when booking multiple classes, and needing to see all available classes at a glance without being overwhelmed by too many options at once.
 
-**Your Answer:**
+A suitable task flow is: `Start → Select date from weekly calendar → Browse available classes and time slots for selected date → Select class and add to schedule → Repeat for other dates → Review all bookings → Confirm → End`
+
+System feedback is needed when the user confirms the booking, because Priya needs to know all her selected classes were successfully booked and can see a full weekly schedule summary before leaving the app.
+
+One possible friction point is showing all classes for the entire week at once, which overwhelms the user with too many choices. The design could reduce this by using a weekly calendar where Priya selects a date first, and only the available classes for that specific date are shown — applying Hick's Law to reduce decision overload.
 
 ---
 
 ## Part B — Design Priorities & Content Decisions *(5 marks)*
 
-Based on the scenario and persona, explain what information and actions should be prioritized in the app feature.
+### ✅ Answer
 
-Your answer should:
-- Identify the most important information the user needs before making a decision
-- Explain which actions should be easiest to access
-- Justify why these priorities fit the user's goal, context, and pain points
-- Explain one design decision that reduces unnecessary effort or confusion
+The most important information for the user is the weekly calendar view, available class names and time slots for each selected date, and a running summary of already selected classes so Priya can track her weekly plan as she builds it.
 
-**Suggested Answer Structure:**
-```
-The most important information for the user is...
-The easiest actions to access should be...
-These priorities fit the persona because...
-One design decision that reduces effort or confusion is...
-```
+The easiest actions to access should be the date selector on the calendar, the class selection buttons, the Add to Schedule button, and the final Confirm button. All buttons should be large, clearly labeled, and placed within easy thumb reach at the bottom of the screen.
 
-**Your Answer:**
+These priorities fit the persona because Priya books every Sunday for the full week ahead and wants to plan multiple sessions in one sitting. Showing the right information at the right time — date first, then classes for that date — lets her move through the flow without confusion or repeated steps.
+
+One design decision that reduces effort or confusion is persisting her selected classes across screens so that when she navigates back to pick a class for another date, her previous selections are saved and visible — directly addressing her frustration of losing selections after navigating away.
 
 ---
 
 ## Part C — Screen Type & Screen Purpose *(5 marks)*
 
-Choose **three important screens** from your proposed task flow and explain the purpose of each screen.
-
-For each screen:
-- Identify an appropriate screen type or interaction model covered in class
-- Justify why it fits that moment in the task
-- Explain what key UI element belongs on that screen
-- Explain how that screen helps the user move closer to completing the task
-
-**Suggested Answer Structure:**
+### ✅ Answer
 
 | Screen | Screen Type / Model | Reason | Key UI Element | User Progress |
 |--------|---------------------|--------|----------------|---------------|
-| | | | | |
-| | | | | |
-| | | | | |
-
-**Your Answer:**
+| Weekly Calendar | Overview | Priya needs to see the full week at a glance and select which dates to book classes for, without being overwhelmed by all classes at once | Weekly calendar grid, date selector, already-booked indicators | User is selecting which days she wants to book and building a mental picture of her week |
+| Available Classes for Selected Date | Focus | After selecting a date, Priya is focused on one specific decision — which class and time slot to pick for that day | Class cards, time slot selector, Add to Schedule button | User is choosing a class for one specific day, keeping decisions manageable |
+| Review and Confirm Bookings | Do | User completes the final action of confirming all selected classes for the week | Confirm button, full weekly booking summary, class names and times | User has confirmed all bookings and can see the complete weekly schedule |
 
 ---
 
 ## Part D — Navigation, Interaction & Design Justification *(5 marks)*
 
-Explain how the app should guide the user through the task and support clear interaction.
+### ✅ Answer
 
-Your answer should:
-- Describe one navigation or wayfinding decision and why it helps the user
-- Apply **two interaction design principles** covered in class to specific UI decisions
-- Show how these decisions reduce confusion, save time, prevent errors, or support the persona
+One useful navigation decision is placing a Back button on every screen so Priya can return to the calendar and adjust a class selection for a specific day without losing her other bookings or restarting the entire flow.
 
-**Suggested Answer Structure:**
-```
-One useful navigation or wayfinding decision is...
-The first interaction design principle is... A specific UI decision is...
-The second interaction design principle is... A specific UI decision is...
-Together, these decisions support the persona because...
-```
+The first interaction design principle is Hick's Law. A specific UI decision is filtering the class list by selected date, so instead of showing all classes for the entire week at once, Priya only sees the available options for one day at a time — reducing decision overload and making each choice faster.
 
-**Your Answer:**
+The second interaction design principle is the Feedback Principle. A specific UI decision is showing a persistent mini-summary of already selected classes at the top of the screen while Priya continues booking, so she always knows what she has picked and never feels like her selections were lost.
+
+Together, these decisions support the persona because Priya books her entire week in one sitting every Sunday, gets frustrated when selections disappear, and needs to move through multiple booking decisions quickly and confidently without starting over.
 
 ---
 
