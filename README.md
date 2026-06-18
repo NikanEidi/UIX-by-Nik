@@ -51,6 +51,7 @@ flowchart LR
 | [Mock 1 — with Answers](Mocks/mock1.md) | Full practice question with persona, scenario, and model answers for all 4 parts |
 | [Mock 2 — with Answers](Mocks/mock2.md) | Full practice question with persona, scenario, and model answers for all 4 parts |
 | [Mock 3 — with Answers](Mocks/mock3.md) | Full practice question with persona, scenario, and model answers for all 4 parts |
+| [Mock 4 — with Answers](Mocks/mock4.md) | Full practice question with persona, scenario, and model answers for all 4 parts |
 
 ---
 
